@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/logistics/logistics",
+    "pages/myIndex/myIndex",
+    "pages/goodsList/goodsList",
+    "pages/nodeList/nodeList",
+    "pages/nodeInfo/nodeInfo",
+    "pages/cx/cx"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧物流质询系统",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

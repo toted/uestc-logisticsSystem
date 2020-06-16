@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#88b4f7",
+  "navigationBarTitleText": "输入订单号查询",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,26 @@
+<import src="../template/tabBar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+<text class="mytext">物品填写</text>
+<view class="section">出发地</view>
+<view class="input-text">
+  <picker bindchange="bindPickerChange1" value="{{index}}" range="{{array}}">
+    <view class="input-text2">
+      出发地点：{{array[index1]}}
+    </view>
+  </picker>
+</view>
+<view class="section">目的地</view>
+<view class="input-text">
+  <picker bindchange="bindPickerChange2" value="{{index}}" range="{{array}}">
+    <view class="input-text2">
+      目的地点：{{array[index2]}}
+    </view>
+  </picker>
+</view>
+<form>
+  <view class="section">重量</view>
+  <view class="input-text">
+    <input type="text" class="input-text1" name="weight" id="weight" placeholder="单位/Kg" bindinput="setweight" />
+  </view>
+  <button class="button1"hover-class="mybutton-hover1" bindtap="report">提交</button>
+</form>

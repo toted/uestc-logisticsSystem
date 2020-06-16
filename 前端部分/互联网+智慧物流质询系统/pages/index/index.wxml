@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<view class="mycontainer">
+  <text class="mytext">互联网+</text>
+  <text class="mytext">智慧物流质询系统</text>
+  <view class="www">
+    <button style="width:50%" class="mybutton" hover-class="mybutton-hover" bindtap="login">登录</button>
+    <button style="width:50%" class="mybutton" hover-class="mybutton-hover" bindtap="register">注册</button>
+  </view>
+</view>
+

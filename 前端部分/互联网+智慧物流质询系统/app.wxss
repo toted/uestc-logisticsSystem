@@ -1,0 +1,35 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+} 
+.menu-item{  
+  width: 32%;  
+  float: left;  
+  text-align: center;  
+  padding-top: 8rpx; 
+  border-bottom: 1%  #88b4f7; 
+}  
+.img{ 
+  width: 23px;  
+  height: 23px;  
+  display: block;  
+  margin:auto;  
+}  
+.clear{  
+  clear: both;  
+}  
+.tab-bar{  
+  background-color: #ffffff;
+  height:7%;
+  position: fixed;  
+  width: 100%;  
+  padding: 0 2%;  
+}  
+

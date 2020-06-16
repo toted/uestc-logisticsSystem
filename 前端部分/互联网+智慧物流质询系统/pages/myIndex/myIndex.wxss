@@ -1,0 +1,67 @@
+/* component/WPTX/WPTX.wxss */
+.mytext{
+  color: #88b4f7;
+  font-size: 70rpx;
+  font-weight: bold;
+  display:flex; 
+  padding-bottom: 100rpx;
+  justify-content:center;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+.input-text{
+  width: 70%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  margin-left: 15%;
+  margin-bottom: 4%;
+  height: 9%;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 40rpx;
+  border: 5rpx solid #88b4f7; 
+}
+
+.input-text1{
+  margin-left: 7%;
+  margin-right: 7%;
+  height: 80%;
+  border-bottom-style: solid;
+  border-bottom-color: #b4b4b4;
+  align-items: center;
+  background-color: #ffffff;
+}
+.input-text2{
+  margin-left: 7%;
+  margin-right: 7%;
+  height: 80%;
+  border-bottom-style: solid;
+  border-bottom-color: #b4b4b4;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.button1{
+  background-color: #ffffff;
+  color: #88b4f7;
+  border: 5rpx solid #88b4f7; 
+  margin: 2%;
+  border-radius: 110rpx;  
+  margin-top: 80rpx;
+}
+.mybutton-hover1{
+  background-color: #88b4f7;
+  color: #ffffff;
+  border: 5rpx solid #ffffff; 
+  margin: 2%;
+  border-radius: 110rpx;  
+  margin-top: 80rpx;
+}
+.section{
+  margin-top: 10%;
+  display: flex;
+  margin-left: 15%;
+  flex-direction: column;
+  align-items: left;
+  color: #88b4f7;
+}

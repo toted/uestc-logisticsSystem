@@ -1,0 +1,22 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">订单编号</view>
+    <view class="th">上一站</view>
+    <view class="th">下一站</view>
+    <view class="th ">状态</view> 
+  </view>
+  <block wx:for="{{listData}}" wx:key="code">
+    <view bindtap="showtext" data-lockerid='{{item.text}}' class="tr2" hover-class="tr3" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.fromArea}}</view>
+      <view class="td">{{item.toArea}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+    <view bindtap="showtext" data-lockerid='{{item.text}}' class="tr" hover-class="tr3"  wx:else>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.fromArea}}</view>
+      <view class="td">{{item.toArea}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/register/register.wxml-->
+<view class="mycontainer">
+  <text class="mytext">注册</text>
+  <form>
+    <view class="input-text">
+      <input type="text" class="input-text1" name="tel" id="tel" placeholder="手机号" bindinput="settel" />
+    </view>
+    <view class="input-text">
+      <input type="text" class="input-text1" name="email" id="email" placeholder="邮箱" bindinput="setemail" />
+    </view>
+    <view class="input-text">
+      <input type="text" class="input-text1" name="verificationCode" id="verificationCode" placeholder="验证码" bindinput="setverificationCode" />
+    </view>
+    <view class="input-text">
+      <input type="password" class="input-text1" name="password" id="password" placeholder="密码" bindinput="setpassword" />
+    </view>
+    <view class="input-text">
+      <input type="password" class="input-text1" name="repassword" id="repassword" placeholder="确认密码" bindinput="setrepassword" />
+    </view>
+      <button class="button1"hover-class="mybutton-hover1" bindtap="verification">获取验证码</button>
+      <button class="button1"hover-class="mybutton-hover1" bindtap="register">注册</button>
+  </form>
+</view>
