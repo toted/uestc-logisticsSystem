@@ -130,6 +130,21 @@ Page({
         })
       }
     } else {
+      /**
+       * 下面是测试
+      
+      wx.showToast({
+        title: '提交成功!',
+        icon: 'success',
+        duration: 2000
+      })
+      wx.showModal({
+        title: '提示',
+        content: '价格：' + '1234' + '元\n预计耗时：' + '5天9小时8分钟6秒',
+        showCancel:false
+      })
+      */
+
       wx.request({
          url: url.url.report,
          method: 'POST',
@@ -141,8 +156,7 @@ Page({
            "startId": this.data.index1+1,
            "endId": this.data.index2+1,
            "session": app.globalData.session,
-           "weight": this.data.weight,
-           "userId": app.globalData.userId
+           "weight": this.data.weight
          },
          success: function (res) {
            //console.log(res.data)
@@ -150,7 +164,12 @@ Page({
              wx.showToast({
                title: '提交成功!',
                icon: 'success',
-               duration: 2000
+               duration: 1000
+             })
+             wx.showModal({
+               title: '提示',
+               content: '价格：'+res.data.price+'元\r\n预计耗时：'+res.data.time,
+               showCancel: false
              })
            }
            if (res.data.code == 1) {

@@ -48,7 +48,7 @@ Page({
       wx.navigateTo({
         url:'../myIndex/myIndex'
       })
-       */
+      */
       wx.request({
         url: url.url.login,
         method: 'POST',

@@ -3,7 +3,7 @@
   <text class="mytext">注册</text>
   <form>
     <view class="input-text">
-      <input type="text" class="input-text1" name="tel" id="tel" placeholder="手机号" bindinput="settel" />
+      <input type="text" class="input-text1" name="userId" id="userId" placeholder="用户名" bindinput="setuserId" />
     </view>
     <view class="input-text">
       <input type="text" class="input-text1" name="email" id="email" placeholder="邮箱" bindinput="setemail" />

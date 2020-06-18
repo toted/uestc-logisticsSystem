@@ -3,8 +3,8 @@
 <template is="tabBar" data="{{tabBar}}"/>
 <view class="table">
   <view class="tr bg-w">
-    <view class="th">序号</view>
-    <view class="th">名称</view>
+    <view class="th">节点编号</view>
+    <view class="th">节点名称</view>
     <view class="th ">航运节点</view> 
   </view>
   <block wx:for="{{listData}}" wx:key="code">

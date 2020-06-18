@@ -1,20 +1,22 @@
 // pages/register/register.js
+const app = getApp()
+const url = require('../../utils/url.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tel:'',
+    userId:'',
     email:'',
     password:'',
     repassword: '',
     verificationCode:'',
     isfinish:true,
   },
-  settel:function(e){
+  setuserId:function(e){
     this.setData({
-      tel:e.detail.value
+      userId:e.detail.value
     })
   },
   setemail: function (e) {
@@ -38,51 +40,63 @@ Page({
     })
   },
   verification:function(e){
-    if(this.data.email==''){
+    console.log(this.data)
+    if (this.data.userId == '' | this.data.email == '' | this.data.password == '' | this.data.repassword == ''){
       wx.showToast({
-        title: '请输入邮箱!',
+        title: '请输入完整信息!',
         icon: 'fail',
         image: '/images/fail.png',
         duration: 2000
       })
     }else{
-      wx.request({
-        url: url.url.verification,
-        method: 'POST',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded'
-        },
-        data: {
-          'token': 'UZIYONGYUANDESHEN',
-          'email': this.data.email,
-        },
-        success: function (res) {
-          //console.log(res.data)
-          if (res.data.code == 0) {
-            wx.showToast({
-              title: '发送成功!',
-              icon: 'success',
-              duration: 2000
-            })
+      if(this.data.password!=this.data.repassword){
+        wx.showToast({
+          title: '两次密码不同!',
+          icon: 'fail',
+          image: '/images/fail.png',
+          duration: 2000
+        })
+      }else{
+        wx.request({
+          url: url.url.verification,
+          method: 'POST',
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
+          data: {
+            "token": "UZIYONGYUANDESHEN",
+            "userId": this.data.userId,
+            "email": this.data.email,
+            "password": this.data.email,
+          },
+          success: function (res) {
+            //console.log(res.data)
+            if (res.data.code == 0) {
+              wx.showToast({
+                title: '发送成功!',
+                icon: 'success',
+                duration: 2000
+              })
+            }
+            if (res.data.code == 1) {
+              wx.showToast({
+                title: '参数错误！',
+                icon: 'fail',
+                image: '/images/fail.png',
+                duration: 2000
+              })
+            }
+            if (res.data.code == 2) {
+              wx.showToast({
+                title: '邮箱已被注册！',
+                icon: 'fail',
+                image: '/images/fail.png',
+                duration: 2000
+              })
+            }
           }
-          if (res.data.code == 1) {
-            wx.showToast({
-              title: '参数错误！',
-              icon: 'fail',
-              image: '/images/fail.png',
-              duration: 2000
-            })
-          }
-          if (res.data.code == 2) {
-            wx.showToast({
-              title: '邮箱已被注册！',
-              icon: 'fail',
-              image: '/images/fail.png',
-              duration: 2000
-            })
-          }
-        }
-      })
+        })
+      }
     }
   },
   register:function(e){
@@ -126,7 +140,7 @@ Page({
         },
         data: {
           "token": "UZIYONGYUANDESHEN",
-          "tel": this.data.tel,
+          "userId": this.data.userId,
           "email": this.data.email,
           "password": this.data.email,
           "verificationCode": this.data.verificationCode

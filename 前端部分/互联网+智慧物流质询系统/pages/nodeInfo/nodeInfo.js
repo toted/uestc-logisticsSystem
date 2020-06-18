@@ -8,13 +8,13 @@ Page({
    */
   data: {
     listData: [
-      { "code": "01", "text": "748965456479864", "fromArea": "北京", "toArea": "重庆","type": "已接收" },
-      { "code": "02", "text": "748965456479864", "fromArea": "-", "toArea": "重庆", "type": "已发送" },
-      { "code": "03", "text": "748965456479864", "fromArea": "北京", "toArea": "-", "type": "已签收" },
-      { "code": "04", "text": "748965456479864", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-      { "code": "05", "text": "748965456479864", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-      { "code": "06", "text": "748965456479864", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-      { "code": "07", "text": "748965456479864", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
+      { "code": "01", "text": "7489654564", "fromArea": "北京", "toArea": "重庆","type": "已接收" },
+      { "code": "02", "text": "7489654564", "fromArea": "-", "toArea": "重庆", "type": "已发送" },
+      { "code": "03", "text": "7489654564", "fromArea": "北京", "toArea": "-", "type": "已签收" },
+      { "code": "04", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
+      { "code": "05", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
+      { "code": "06", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
+      { "code": "07", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
     ]
   },
   showtext: function (e) {
@@ -27,7 +27,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  console.log(options.nodeNum)
+    console.log(options.nodeNum)
     var that = this
     wx.request({
       url: url.url.getNodeInfo,
@@ -37,7 +37,6 @@ Page({
       },
       data: {
         'token': 'UZIYONGYUANDESHEN',
-        'session': app.globalData.session,
         "nodeNum": options.nodeNum
       },
       success: function (res) {

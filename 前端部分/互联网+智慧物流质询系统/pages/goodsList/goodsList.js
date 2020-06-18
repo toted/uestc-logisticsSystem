@@ -8,13 +8,14 @@ Page({
    */
   data: {
     listData: [
-      { "code": "01", "text": "748965456479864", "type": "已签收" },
-      { "code": "02", "text": "748965456479865", "type": "已签收" },
-      { "code": "03", "text": "748965456479866", "type": "已签收" },
-      { "code": "04", "text": "748965456479867", "type": "已签收" },
-      { "code": "05", "text": "748965456479868", "type": "已签收" },
-      { "code": "06", "text": "748965456479869", "type": "已签收" },
-      { "code": "07", "text": "748965456479870", "type": "已签收" }
+      { "code": "1", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
+      { "code": "2", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
+      { "code": "3", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
+      { "code": "4", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
+      { "code": "5", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
+      { "code": "6", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
+      { "code": "7", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" }
+
     ]
   },
   showtext: function (e) {
@@ -32,6 +33,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showToast({ title: '加载中', icon: 'loading', duration: 10000 });
     var that=this
     wx.request({
       url: url.url.getGoodsList,
@@ -42,7 +44,6 @@ Page({
       data: {
         'token': 'UZIYONGYUANDESHEN',
         'session': app.globalData.session,
-        'userId': app.globalData.userId,
       },
       success: function (res) {
         if (res.data.code == 0) {
@@ -72,6 +73,9 @@ Page({
             duration: 2000
           })
         }
+      },
+      complete: () => {
+        wx.hideToast()
       }
     })
   },
