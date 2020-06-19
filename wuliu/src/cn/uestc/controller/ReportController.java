@@ -45,7 +45,6 @@ public class ReportController {
 		int endId = Integer.parseInt(request.getParameter("endId"));
 		String session = request.getParameter("session");
 		int weight = Integer.parseInt(request.getParameter("weight"));
-		
 		if(token.equals(TOKEN) == false) {
 			object.setCode(1);
 			object.setMessage("parameter error");

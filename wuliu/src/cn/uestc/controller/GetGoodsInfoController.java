@@ -66,7 +66,7 @@ public class GetGoodsInfoController {
 				object.setCode(0);
 				object.setMessage("success");
 				OrderInfo orderInfo = new OrderInfo();
-				orderInfo.setOrderCreateTime(goodsNow.getTime());
+				orderInfo.setOrderCreateTime(goodsNow.getTime().substring(0, goodsNow.getTime().length()-2));
 				orderInfo.setOrderNo(text);
 				LogisticsInfo logi = Dijkstra.dijkstra(goodsNow.getStart(), goodsNow.getEnd(), goodsNow.getWeight(),(new User()).vip(userId) ,goodsNow.getTime());
 				orderInfo.setSendTime(Dijkstra.addTime(goodsNow.getTime(),1440*60 + 60*Dijkstra.timeConvert(logi.getTime())));

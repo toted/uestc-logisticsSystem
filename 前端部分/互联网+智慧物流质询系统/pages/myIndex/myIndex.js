@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['北京', '郑州', '济南', '西安', '成都', '重庆'],
+    array: ['','北京', '郑州', '济南', '西安', '成都', '重庆'],
     objectArray: [
       {
         id: 1,
@@ -153,8 +153,8 @@ Page({
          },
          data: {
            "token": "UZIYONGYUANDESHEN",
-           "startId": this.data.index1+1,
-           "endId": this.data.index2+1,
+           "startId": this.data.index1,
+           "endId": this.data.index2,
            "session": app.globalData.session,
            "weight": this.data.weight
          },

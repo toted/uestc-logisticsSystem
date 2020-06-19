@@ -53,6 +53,7 @@ public class GetNodeInfoController {
 			List<Goods> list = goodsService.selectAll(goods);
 			String time = df.format(new Date());
 			List<GetNodeInfoInfo> infoList = new ArrayList<GetNodeInfoInfo>();
+			int cnt = 0;
 			for(int i=0;i<list.size();i++) {
 				GetNodeInfoInfo info = new GetNodeInfoInfo();
 				Goods good = list.get(i);
@@ -62,7 +63,7 @@ public class GetNodeInfoController {
 				int flag = 0;
 				for(int j=0;j<path.size();j++) {
 					Node node = path.get(j);
-					if(Dijkstra.name[nodeNum].compareTo(node.getPosition()) == 0) {
+					if(Dijkstra.name[nodeNum].equals(node.getPosition()) == true && flag == 0) {
 						if(nodeNum == good.getEnd()) {
 							info.setToArea("-");
 							flag = 1;
@@ -77,7 +78,8 @@ public class GetNodeInfoController {
 							info.setFromArea("-");
 							info.setToArea(lastName);
 							flag = 1;
-							info.setCode(String.valueOf(i+1));
+							info.setCode(String.valueOf(cnt+1));
+							cnt++;
 							info.setText(good.getGoodsId());
 							if(time.compareTo(node.getSendTime()) > 0) {
 								info.setType("已发送");
@@ -88,6 +90,7 @@ public class GetNodeInfoController {
 							else {
 								info.setType("已接收");
 							}
+							infoList.add(info);
 							break;
 						}
 						else {
@@ -106,12 +109,14 @@ public class GetNodeInfoController {
 					}
 					else if(flag == 1) {
 						info.setFromArea(node.getPosition());
-						info.setCode(String.valueOf(i+1));
+						info.setCode(String.valueOf(cnt+1));
+						cnt++;
 						info.setText(good.getGoodsId());
+						infoList.add(info);
 						break;
 					}
+					lastName = node.getPosition();
 				}
-				infoList.add(info);
 			}
 			object.setCode(0);
 			object.setInfo(infoList);
