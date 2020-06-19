@@ -7,15 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listData: [
-      { "code": "01", "text": "7489654564", "fromArea": "北京", "toArea": "重庆","type": "已接收" },
-      { "code": "02", "text": "7489654564", "fromArea": "-", "toArea": "重庆", "type": "已发送" },
-      { "code": "03", "text": "7489654564", "fromArea": "北京", "toArea": "-", "type": "已签收" },
-      { "code": "04", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-      { "code": "05", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-      { "code": "06", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-      { "code": "07", "text": "7489654564", "fromArea": "北京", "toArea": "重庆", "type": "已签收" },
-    ]
+    listData: ''
   },
   showtext: function (e) {
     console.log(e.currentTarget.dataset.lockerid)

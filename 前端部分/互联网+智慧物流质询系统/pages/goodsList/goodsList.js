@@ -7,16 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listData: [
-      { "code": "1", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
-      { "code": "2", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
-      { "code": "3", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
-      { "code": "4", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
-      { "code": "5", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
-      { "code": "6", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" },
-      { "code": "7", "text": "7489654564", "type": "已签收", "price": 2323, "time": "5天9时8钟6秒" }
-
-    ]
+    listData: ''
   },
   showtext: function (e) {
     console.log(e.currentTarget.dataset.lockerid)

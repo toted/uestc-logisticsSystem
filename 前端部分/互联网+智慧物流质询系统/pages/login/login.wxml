@@ -3,7 +3,7 @@
   <text class="mytext">登录</text>
   <form>
     <view class="input-text">
-      <input type="text" class="input-text1" name="userId" id="userId" placeholder="手机号或邮箱" bindinput="setuserId" />
+      <input type="text" class="input-text1" name="userId" id="userId" placeholder="用户名或邮箱" bindinput="setuserId" />
     </view>
     <view class="input-text">
       <input type="password" class="input-text1" name="password" id="password" placeholder="密码" bindinput="setpassword" />

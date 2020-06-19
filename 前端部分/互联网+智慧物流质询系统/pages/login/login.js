@@ -44,11 +44,11 @@ Page({
     } else {
       /**
        * 下面是测试跳转
-      
+          
       wx.navigateTo({
         url:'../myIndex/myIndex'
       })
-      */
+  */
       wx.request({
         url: url.url.login,
         method: 'POST',
