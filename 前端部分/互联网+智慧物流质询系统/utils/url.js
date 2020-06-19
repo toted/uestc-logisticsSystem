@@ -1,11 +1,11 @@
 module.exports = {
   url: {
-    'login': 'https://app.kunqueen.xyz/login',
-    'register': 'https://app.kunqueen.xyz/register',
-    'verification': 'https://app.kunqueen.xyz/verification',
-    'report': 'https://app.kunqueen.xyz/report',
-    'getGoodsList': 'https://app.kunqueen.xyz/getGoodsList',
-    'getGoodsInfo': 'https://app.kunqueen.xyz/getGoodsInfo',
-    'getNodeInfo': 'https://app.kunqueen.xyz/getNodeInfo',
+    'login': 'http://localhost:8080/wuliu2/login',
+    'register': 'http://localhost:8080/wuliu2/register',
+    'verification': 'http://localhost:8080/wuliu2/verification',
+    'report': 'http://localhost:8080/wuliu2/report',
+    'getGoodsList': 'http://localhost:8080/wuliu2/getGoodsList',
+    'getGoodsInfo': 'http://localhost:8080/wuliu2/getGoodsInfo',
+    'getNodeInfo': 'http://localhost:8080/wuliu2/getNodeInfo',
   },
 }

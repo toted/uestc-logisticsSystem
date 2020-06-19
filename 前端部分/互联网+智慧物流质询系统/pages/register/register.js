@@ -67,7 +67,7 @@ Page({
             "token": "UZIYONGYUANDESHEN",
             "userId": this.data.userId,
             "email": this.data.email,
-            "password": this.data.email,
+            "password": this.data.password,
           },
           success: function (res) {
             //console.log(res.data)
@@ -142,7 +142,7 @@ Page({
           "token": "UZIYONGYUANDESHEN",
           "userId": this.data.userId,
           "email": this.data.email,
-          "password": this.data.email,
+          "password": this.data.password,
           "verificationCode": this.data.verificationCode
         },
         success: function (res) {
