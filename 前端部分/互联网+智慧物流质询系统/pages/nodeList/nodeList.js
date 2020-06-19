@@ -10,10 +10,10 @@ Page({
     listData: [
       { "code": "1", "text": "北京", "type": "是" },
       { "code": "2", "text": "郑州", "type": "否" },
-      { "code": "3", "text": "济南", "type": "是" },
-      { "code": "4", "text": "西安", "type": "否" },
-      { "code": "5", "text": "重庆", "type": "是" },
-      { "code": "6", "text": "成都", "type": "否" }
+      { "code": "3", "text": "济南", "type": "否" },
+      { "code": "4", "text": "西安", "type": "是" },
+      { "code": "5", "text": "重庆", "type": "否" },
+      { "code": "6", "text": "成都", "type": "是" }
     ]
   },
   showtext: function (e) {
