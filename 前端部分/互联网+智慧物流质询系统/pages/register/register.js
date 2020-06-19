@@ -88,7 +88,7 @@ Page({
             }
             if (res.data.code == 2) {
               wx.showToast({
-                title: '邮箱已被注册！',
+                title: '验证失败！',
                 icon: 'fail',
                 image: '/images/fail.png',
                 duration: 2000
@@ -167,7 +167,7 @@ Page({
           }
           if (res.data.code == 2) {
             wx.showToast({
-              title: '手机号已被注册！',
+              title: '用户已被注册！',
               icon: 'fail',
               image: '/images/fail.png',
               duration: 2000
